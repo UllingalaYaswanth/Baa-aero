@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
+import droneBanner from '../assets/drone-banner.jpeg'; 
 export default function Agriculture() {
   const navigate = useNavigate()
+  
   return (
- <section id="agriculture" className="py-20 px-8 bg-white relative overflow-hidden">
+    <section id="agriculture" className="py-20 px-8 bg-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/5 right-5 w-48 h-48 rounded-full bg-yellow-400/5 animate-pulse"></div>
@@ -14,59 +16,107 @@ export default function Agriculture() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 relative inline-block">
-              Revolutionizing Agriculture with Drones
+              Smart Farming with ARIES AGRONE-X
               <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
             </h2>
             
-            
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              At Bhavyansh Aero Academy, we're transforming traditional farming methods with cutting-edge drone technology. 
-              Our agricultural solutions help farmers increase yields while reducing costs and environmental impact.
+              ARIES Solutions is India's premier drone manufacturing company, bringing cutting-edge agricultural drone technology to farmers. 
+              Our AGRONE-X series combines aeronautical engineering excellence with simple operation for maximum field productivity.
             </p>
             
             <div className="space-y-4 mb-8">
               <FeatureItem 
-                icon="fas fa-check-circle" 
-                text="Precision spraying with up to 90% reduction in chemical usage" 
+                icon="fas fa-spray-can" 
+                text="10L capacity spraying system with 4 modular nozzles" 
               />
               <FeatureItem 
-                icon="fas fa-check-circle" 
-                text="Crop health monitoring through multispectral imaging" 
+                icon="fas fa-compress-alt" 
+                text="Folding body design (600×600×500mm when folded)" 
               />
               <FeatureItem 
-                icon="fas fa-check-circle" 
-                text="Automated field mapping and analysis" 
+                icon="fas fa-battery-full" 
+                text="18.1 minutes flight time with 22000mAh 6s battery" 
               />
               <FeatureItem 
-                icon="fas fa-check-circle" 
-                text="Irrigation planning and water management" 
+                icon="fas fa-random" 
+                text="Switch between spraying and spreading in 5 minutes" 
               />
             </div>
             
-            <button 
-              onClick={() => navigate('/agriculture-drones')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
-            >
-              <span className="btn-wave"></span>
-              Learn About Our Agri-Drones
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button 
+                onClick={() => navigate('/agriculture-drones')}
+                className="px-8 py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
+              >
+                <span className="btn-wave"></span>
+                Explore AGRONE-X Drones
+              </button>
+              <button 
+                onClick={() => navigate('/contact')}
+                className="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors duration-300"
+              >
+                Get Custom Quote
+              </button>
+            </div>
           </div>
           
           <div className="relative">
             <div 
               className="h-96 rounded-xl bg-cover bg-center shadow-xl transform perspective-1000 rotate-y-0 hover:rotate-y-10 transition-transform duration-500"
               style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'
+                backgroundImage: `url(${droneBanner})`
               }}
             ></div>
+
             
             <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-yellow-400 to-red-700 w-36 h-36 rounded-full flex items-center justify-center text-white font-bold shadow-xl animate-pulse">
               <div className="text-center">
-                <div className="text-3xl">60%</div>
-                <div>Cost Reduction</div>
+                <div className="text-3xl">50%</div>
+                <div>More Flight Time</div>
+              </div>
+            </div>
+
+            <div className="absolute -top-6 -left-6 bg-white p-3 rounded-lg shadow-md">
+              <div className="flex items-center">
+                <div className="bg-blue-900 text-white p-2 rounded-full mr-2">
+                  <i className="fas fa-certificate"></i>
+                </div>
+                <div>
+                  <div className="font-bold text-blue-900">DGCA Certified</div>
+                  <div className="text-xs text-gray-500">Small Category</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Technical Highlights */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <TechHighlight 
+            icon="fas fa-weight" 
+            value="24.9kg" 
+            label="Max Takeoff Weight" 
+            color="blue" 
+          />
+          <TechHighlight 
+            icon="fas fa-tint" 
+            value="10L" 
+            label="Payload Capacity" 
+            color="red" 
+          />
+          <TechHighlight 
+            icon="fas fa-ruler-combined" 
+            value="1300×1300×550mm" 
+            label="Unfolded Size" 
+            color="yellow" 
+          />
+          <TechHighlight 
+            icon="fas fa-map-marked-alt" 
+            value="500m" 
+            label="Operating Range" 
+            color="green" 
+          />
         </div>
       </div>
     </section>
@@ -84,6 +134,23 @@ function FeatureItem({ icon, text }) {
     >
       <i className={`${icon} text-2xl mr-4 transition-colors duration-300 ${hover ? 'text-yellow-400' : 'text-red-700'}`}></i>
       <span className="font-medium">{text}</span>
+    </div>
+  )
+}
+
+function TechHighlight({ icon, value, label, color }) {
+  const colorClasses = {
+    blue: 'bg-blue-100 text-blue-900',
+    red: 'bg-red-100 text-red-900',
+    yellow: 'bg-yellow-100 text-yellow-900',
+    green: 'bg-green-100 text-green-900'
+  }
+
+  return (
+    <div className={`p-4 rounded-lg ${colorClasses[color]} text-center`}>
+      <i className={`${icon} text-3xl mb-2`}></i>
+      <div className="text-2xl font-bold">{value}</div>
+      <div className="text-sm">{label}</div>
     </div>
   )
 }

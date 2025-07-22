@@ -3,22 +3,57 @@ import { useNavigate } from 'react-router-dom'
 import { servicesData } from '../data/servicesData'
 
 export default function Services() {
- 
- const navigate = useNavigate()
+  const navigate = useNavigate()
+  const [activeTab, setActiveTab] = useState('all')
+  
+  const filteredServices = activeTab === 'all' 
+    ? servicesData 
+    : servicesData.filter(service => service.category === activeTab)
+
   return (
-    <section id="services" className="py-20 px-8 bg-white relative">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-5 w-12 h-12 rounded-full bg-yellow-400/10 animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-20 h-20 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
-        <div className="absolute top-30 right-5 w-8 h-8 rounded-full bg-red-700/10 animate-pulse delay-500"></div>
+    <section id="services" className="py-20 px-4 sm:px-8 bg-gray-50 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-10 w-16 h-16 rounded-full bg-blue-600/5 animate-float"></div>
+        <div className="absolute bottom-1/3 right-20 w-24 h-24 rounded-full bg-emerald-500/5 animate-float-delay"></div>
+        <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-blue-600/5 animate-float-delay-2"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <SectionHeading title="Our Services" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <span className="inline-block py-1 px-3 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4">
+            Drone Solutions
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative">
+            <span className="relative inline-block">
+              Our Professional
+              <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-600/30 -z-10"></span>
+            </span> Services
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
+            Cutting-edge drone technology solutions tailored for your specific needs
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {servicesData.map((service, index) => (
+        {/* Service category tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {['all', 'photography', 'mapping', 'agriculture', 'industrial'].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-5 py-2 rounded-full font-medium transition-all ${
+                activeTab === tab
+                  ? 'bg-gradient-to-r from-blue-600 to-emerald-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+              }`}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
             <ServiceCard 
               key={service.id}
               service={service}
@@ -37,51 +72,51 @@ function ServiceCard({ service, index, onClick }) {
 
   return (
     <div 
-      className={`bg-gray-50 rounded-xl overflow-hidden shadow-lg transition-all duration-500 transform-style-preserve-3d ${
-        hover ? 'transform -translate-y-2 rotate-y-6 shadow-xl' : ''
-      } ${index % 2 === 0 ? 'hover:rotate-y-6' : 'hover:-rotate-y-6'}`}
+      className={`bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-500 ${
+        hover ? 'transform -translate-y-3 shadow-2xl' : ''
+      }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="h-48 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${service.image})` }}
-        >
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} flex items-center justify-center`}>
-            <i className={`${service.icon} text-white text-4xl`}></i>
+      <div className="h-60 relative overflow-hidden">
+        <img 
+          src={service.image} 
+          alt={service.title}
+          className={`w-full h-full object-cover transition-transform duration-700 ${
+            hover ? 'scale-110' : 'scale-100'
+          }`}
+        />
+        <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient}/90 flex items-end p-6`}>
+          <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-white shadow-lg mb-4">
+            <i className={`${service.icon} text-2xl bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}></i>
           </div>
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-red-700 mb-3 relative inline-block">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">
           {service.title}
-          <span className={`absolute bottom-0 left-0 h-0.5 bg-yellow-400 transition-all duration-300 ${
-            hover ? 'w-full' : 'w-0'
-          }`}></span>
         </h3>
-        <p className="text-gray-600 mb-4">{service.description}</p>
+        <p className="text-gray-600 mb-5">{service.description}</p>
+        
+        <div className="flex flex-wrap gap-2 mb-6">
+          {service.features.slice(0, 2).map((feature, i) => (
+            <span key={i} className="inline-flex items-center py-1 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+              <i className={`${feature.icon} mr-2 text-blue-600`}></i>
+              {feature.title}
+            </span>
+          ))}
+        </div>
+        
         <button 
           onClick={onClick}
-          className={`px-5 py-2 rounded-md bg-gradient-to-br ${service.gradient} text-white font-medium transition-all duration-300 relative overflow-hidden ${
-            hover ? 'transform -translate-y-1' : ''
+          className={`w-full flex items-center justify-between px-5 py-3 rounded-xl bg-gradient-to-r ${service.gradient} text-white font-medium transition-all ${
+            hover ? 'shadow-lg' : 'shadow-md'
           }`}
         >
-          <span className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-all duration-700 ${
-            hover ? 'left-0' : '-left-full'
-          }`}></span>
-          Learn More
+          <span>Explore Service</span>
+          <i className="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
         </button>
       </div>
     </div>
-  )
-}
-
-function SectionHeading({ title }) {
-  return (
-    <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
-      {title}
-      <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
-    </h2>
   )
 }

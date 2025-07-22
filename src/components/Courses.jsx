@@ -3,28 +3,40 @@ import { useState } from "react"
 export default function Courses() {
   const courses = [
     {
-      title: "Basic Drone Pilot Course",
-      icon: "fas fa-graduation-cap",
-      description: "Learn the fundamentals of drone operation, safety protocols, and regulations in this comprehensive beginner course.",
-      duration: "4 Weeks",
-      fee: "₹15,000",
-      gradient: "from-blue-900 to-red-700"
+      title: "Certified Associate in Drone Technologies (CADT)",
+      icon: "fas fa-drone",
+      description: "Entry-level certification for beginners covering drone fundamentals, regulations, and applications.",
+      gradient: "from-blue-800 to-green-600"
     },
     {
-      title: "Advanced Drone Technology",
-      icon: "fas fa-cogs",
-      description: "Master advanced flight techniques, aerial photography, mapping, and industrial applications of drone technology.",
-      duration: "8 Weeks",
-      fee: "₹25,000",
-      gradient: "from-red-700 to-yellow-400"
+      title: "Certified Professional in Drone Technologies (CPDT)",
+      icon: "fas fa-tools",
+      description: "Intermediate course focusing on drone systems, payloads, design, and development for real-world scenarios.",
+      gradient: "from-green-600 to-yellow-500"
     },
     {
-      title: "Agricultural Drone Applications",
-      icon: "fas fa-leaf",
-      description: "Specialized training in precision agriculture, crop spraying, monitoring, and data analysis using drone technology.",
-      duration: "6 Weeks",
-      fee: "₹20,000",
-      gradient: "from-yellow-400 to-blue-900"
+      title: "Certified Trainer in Drone Technologies (CTDT)",
+      icon: "fas fa-chalkboard-teacher",
+      description: "Train the trainer program aimed at professionals looking to teach drone technologies.",
+      gradient: "from-yellow-500 to-orange-600"
+    },
+    {
+      title: "Certified Expert in Drone Technologies (CEDT)",
+      icon: "fas fa-drafting-compass",
+      description: "Advanced course focusing on drone design, industry-specific applications, and tech integration.",
+      gradient: "from-orange-600 to-red-600"
+    },
+    {
+      title: "Certified Master Trainer in Drone Technologies (CMTDT)",
+      icon: "fas fa-user-tie",
+      description: "Train the trainers with experience. Focused on mentoring and creating drone-based learning modules.",
+      gradient: "from-red-600 to-purple-700"
+    },
+    {
+      title: "Certified Drone Scientist (CDS)",
+      icon: "fas fa-microscope",
+      description: "Highest-level certification in drone R&D with a focus on innovation and industry impact.",
+      gradient: "from-purple-700 to-blue-900"
     }
   ]
 
@@ -78,18 +90,7 @@ function CourseCard({ course, index }) {
       
       <h3 className="text-xl font-bold text-blue-900 mb-4">{course.title}</h3>
       <p className="text-gray-600 mb-6">{course.description}</p>
-      
-      <div className="bg-gray-100 p-4 rounded-lg mb-6">
-        <p className="mb-2">
-          <i className="fas fa-clock mr-2"></i>
-          Duration: {course.duration}
-        </p>
-        <p>
-          <i className="fas fa-rupee-sign mr-2"></i>
-          Fee: {course.fee}
-        </p>
-      </div>
-      
+
       <button 
         className={`w-full py-3 rounded-lg font-bold text-white bg-gradient-to-r ${course.gradient} transition-all duration-300 relative overflow-hidden ${
           hover ? '-translate-y-1' : ''
