@@ -1,104 +1,120 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Courses() {
   const courses = [
     {
       title: "Certified Associate in Drone Technologies (CADT)",
-      icon: "fas fa-drone",
-      description: "Entry-level certification for beginners covering drone fundamentals, regulations, and applications.",
-      gradient: "from-blue-800 to-green-600"
+      eligibility: "10+2 and above. For engineering science students.",
+      outcome:
+        "Proficiency in drone fundamentals, regulations, drone-based technologies, and their applications in real-world use cases.",
+      duration: "35 hours (Theory: 15 hrs, Practical: 20 hrs)",
+      project: "Project Optional",
     },
     {
       title: "Certified Professional in Drone Technologies (CPDT)",
-      icon: "fas fa-tools",
-      description: "Intermediate course focusing on drone systems, payloads, design, and development for real-world scenarios.",
-      gradient: "from-green-600 to-yellow-500"
+      eligibility: "CADT or 70%+ in CPDT entrance exam.",
+      outcome:
+        "In-depth knowledge of drone systems, payloads, design & development for various drone use cases.",
+      duration: "100 hours (Theory: 50 hrs, Practical: 50 hrs)",
+      project: "100 Hours Project",
     },
     {
       title: "Certified Trainer in Drone Technologies (CTDT)",
-      icon: "fas fa-chalkboard-teacher",
-      description: "Train the trainer program aimed at professionals looking to teach drone technologies.",
-      gradient: "from-yellow-500 to-orange-600"
+      eligibility: "CADT with 1 year experience or CPDT holders.",
+      outcome:
+        "Ability to train and educate others in drone technologies and structure content.",
+      duration: "30 hours (Theory: 10 hrs, Practical: 20 hrs)",
     },
     {
       title: "Certified Expert in Drone Technologies (CEDT)",
-      icon: "fas fa-drafting-compass",
-      description: "Advanced course focusing on drone design, industry-specific applications, and tech integration.",
-      gradient: "from-orange-600 to-red-600"
+      eligibility: "CPDT or CTDT with 2+ years of experience.",
+      outcome:
+        "Expertise in drone design and application for industries like manufacturing and automation.",
+      duration: "150 hours (Theory: 50 hrs, Practical: 100 hrs)",
+      project: "200 Hours Project",
     },
     {
       title: "Certified Master Trainer in Drone Technologies (CMTDT)",
-      icon: "fas fa-user-tie",
-      description: "Train the trainers with experience. Focused on mentoring and creating drone-based learning modules.",
-      gradient: "from-red-600 to-purple-700"
+      eligibility: "CEDT or CPDT with 5+ years experience.",
+      outcome:
+        "Advanced proficiency in training design and mentoring for drone-based learning modules.",
+      duration: "60 hours (Theory: 20 hrs, Practical: 40 hrs)",
     },
     {
       title: "Certified Drone Scientist (CDS)",
-      icon: "fas fa-microscope",
-      description: "Highest-level certification in drone R&D with a focus on innovation and industry impact.",
-      gradient: "from-purple-700 to-blue-900"
-    }
-  ]
+      eligibility: "CEDT or CMTDT with 3+ years in drone R&D.",
+      outcome:
+        "Highest level of expertise in drone research and development with innovation and industry leadership.",
+      duration: "Research Oriented (customized based on scope)",
+    },
+  ];
 
   return (
-    <section id="courses" className="py-20 px-8 bg-gradient-to-br from-gray-50 to-gray-200 relative">
-      {/* Background elements */}
+    <section id="courses" className="py-20 px-8 bg-gray-50 relative">
+      {/* Decorative Background Bubbles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 right-5 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
         <div className="absolute bottom-20 left-10 w-36 h-36 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
-          Drone Education Programs
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
-        </h2>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative">
+            <span className="relative inline-block">
+              Drone Certification 
+              <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-600/30 -z-10"></span>
+            </span> Programs
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
+           Our drone courses equip you with practical skills for the growing drone tech industry.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <CourseCard 
-              key={index}
-              course={course}
-              index={index}
-            />
+            <CourseCard key={index} course={course} />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-function CourseCard({ course, index }) {
-  const [hover, setHover] = useState(false)
-  const [iconHover, setIconHover] = useState(false)
+function CourseCard({ course }) {
+  const [hover, setHover] = useState(false);
 
   return (
-    <div 
-      className={`bg-white rounded-xl p-8 text-center shadow-lg transition-all duration-500 transform-style-preserve-3d ${
-        hover ? 'scale-103 shadow-xl' : ''
-      } ${index % 2 === 0 ? 'hover:rotate-y-5' : 'hover:-rotate-y-5'}`}
+    <div
+      className={`bg-white p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl ${
+        hover ? "-translate-y-2 shadow-lg" : ""
+      }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div 
-        className={`transition-all duration-500 ${iconHover ? '-translate-y-3' : ''}`}
-        onMouseEnter={() => setIconHover(true)}
-        onMouseLeave={() => setIconHover(false)}
-      >
-        <i className={`${course.icon} text-5xl mb-4 text-yellow-400`}></i>
+      <div className="mb-6">
+        <h4 className="font-bold text-blue-900 text-lg mb-1">
+          {course.title}
+        </h4>
+        <div className="h-1 w-16 bg-yellow-400 rounded-full mb-4"></div>
       </div>
-      
-      <h3 className="text-xl font-bold text-blue-900 mb-4">{course.title}</h3>
-      <p className="text-gray-600 mb-6">{course.description}</p>
 
-      <button 
-        className={`w-full py-3 rounded-lg font-bold text-white bg-gradient-to-r ${course.gradient} transition-all duration-300 relative overflow-hidden ${
-          hover ? '-translate-y-1' : ''
-        }`}
-      >
-        <span className="btn-wave"></span>
-        Enroll Now
-      </button>
+      <ul className="text-gray-700 text-sm space-y-3">
+        <li>
+          <strong>Eligibility:</strong> {course.eligibility}
+        </li>
+        <li>
+          <strong>Outcome:</strong> {course.outcome}
+        </li>
+        <li>
+          <strong>Duration:</strong> {course.duration}
+        </li>
+        {course.project && (
+          <li>
+            <strong>Project:</strong> {course.project}
+          </li>
+        )}
+      </ul>
     </div>
-  )
+  );
 }

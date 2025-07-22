@@ -1,94 +1,216 @@
-import { useState } from "react"
+// import { useState } from "react";
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Rahul Sharma",
-      role: "Agricultural Drone Pilot",
-      quote: "The agricultural drone course at Bhavyansh Aero Academy completely transformed my farming business. I now cover more area in less time with precise spraying that saves me money on chemicals.",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-      name: "Priya Patel",
-      role: "Drone Photographer",
-      quote: "The hands-on training and industry connections I gained through the internship program helped me launch my aerial photography business immediately after completion.",
-      rating: 4.5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      name: "Ankit Verma",
-      role: "Drone Technician",
-      quote: "The comprehensive curriculum covered everything from basic flight principles to advanced repair techniques. I was hired by a major drone service provider before I even graduated!",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/men/75.jpg"
-    }
-  ]
+// export default function Portfolio() {
+//   const portfolioItems = [
+//     {
+//       title: "Agricultural Mapping",
+//       description:
+//         "Precision mapping for a 500-acre farm in Punjab, helping optimize irrigation and fertilizer use.",
+//       tags: ["Drone Mapping", "Agriculture"],
+//       image:
+//         "https://images.unsplash.com/photo-1581093450021-4a7360e9aab5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//     },
+//     {
+//       title: "Industrial Inspection",
+//       description:
+//         "Thermal imaging inspection for a power plant in Maharashtra, identifying heat leaks and equipment issues.",
+//       tags: ["Thermal Imaging", "Industrial"],
+//       image:
+//         "https://images.unsplash.com/photo-1506947411487-a56738267384?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//     },
+//     {
+//       title: "Construction Progress",
+//       description:
+//         "Monthly aerial documentation for a large construction project in Bangalore, tracking progress and site logistics.",
+//       tags: ["Construction", "Progress Tracking"],
+//       image:
+//         "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+//     },
+//   ];
+
+//   return (
+//     <section className="py-20 px-6 bg-gray-50 relative">
+//       {/* Background Decorations */}
+//       <div className="absolute inset-0 overflow-hidden">
+//         <div className="absolute top-10 right-5 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
+//         <div className="absolute bottom-20 left-10 w-36 h-36 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
+//       </div>
+
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
+//           Our Portfolio
+//           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
+//         </h2>
+
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+//           {portfolioItems.map((item, index) => (
+//             <PortfolioCard key={index} item={item} />
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// function PortfolioCard({ item }) {
+//   const [hover, setHover] = useState(false);
+
+//   return (
+//     <div
+//       className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
+//         hover ? "-translate-y-2 shadow-xl" : ""
+//       }`}
+//       onMouseEnter={() => setHover(true)}
+//       onMouseLeave={() => setHover(false)}
+//     >
+//       <div
+//         className="h-48 bg-cover bg-center"
+//         style={{ backgroundImage: `url(${item.image})` }}
+//       ></div>
+//       <div className="p-6">
+//         <h3 className="text-xl font-semibold text-blue-900 mb-2">
+//           {item.title}
+//         </h3>
+//         <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+//         <div className="flex flex-wrap gap-2">
+//           {item.tags.map((tag, i) => (
+//             <span
+//               key={i}
+//               className="bg-gray-100 text-gray-700 px-3 py-1 text-xs rounded-full"
+//             >
+//               {tag}
+//             </span>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+import { useState } from "react";
+
+export default function Portfolio() {
+const portfolioItems = [
+
+  {
+    title: "Live Flying Session",
+    description:
+      "Participated in field training with live drone flying sessions for agricultural spraying and surveying.",
+    tags: ["Flight Training", "Aerial Spraying"],
+    image: "/Live_Flying_Session.jpeg",
+  },
+  {
+    title: "Industry Collaboration",
+    description:
+      "Collaborated with professionals on agricultural drone deployment and testing in field conditions.",
+    tags: ["Drone R&D", "Team Project"],
+    image: "/Industry_Collaboration.jpeg",
+  },
+  {
+    title: "Team-Based Troubleshooting",
+    description:
+      "Worked closely with peers and instructors to identify and fix technical issues during drone operation and calibration.",
+    tags: ["Teamwork", "Troubleshooting"],
+    image: "/Team-Based-Troubleshooting.jpeg",
+  },
+  {
+  title: "Course Completion",
+  description:
+    "Successfully completed certified drone training covering UAV regulations, flight operations, and industrial applications.",
+  tags: ["Certified Training", "Drone Regulations"],
+  image: "/Course-Completion.jpeg",
+},
+  {
+    title: "Classroom Interaction",
+    description:
+      "Engaged in detailed drone system demonstrations including payload integration, wiring, and assembly.",
+    tags: ["Drone Assembly", "Hands-on Training"],
+    image: "/Classroom-Interaction.jpeg",
+  },
+{
+  title: "Hands-on Flying",
+  description:
+    "Gained practical experience piloting drones in manual and GPS-assisted modes during field sessions under expert guidance.",
+  tags: ["Manual Flying", "Drone Pilot Training"],
+  image: "/Hands-on-Flying.jpeg",
+},
+{
+  title: "Drone Testing",
+  description:
+    "Performed functional and stability tests on various drone models to validate flight accuracy, payload capacity, and system reliability.",
+  tags: ["Flight Testing", "System Validation"],
+  image: "/Drone-Testing.jpeg",
+},
+
+  {
+    title: "Pre-Flight Checks",
+    description:
+      "Followed standard drone checklists for battery levels, propeller inspection, GPS lock, and safety protocols.",
+    tags: ["Pre-flight", "Safety"],
+    image: "/Pre-Flight-Checks.jpeg",
+  },
+];
 
   return (
-    <section className="py-20 px-8 bg-gray-50 relative">
-      {/* Background elements */}
+    <section className="py-20 px-6 bg-gray-50 relative">
+      {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 right-5 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
         <div className="absolute bottom-20 left-10 w-36 h-36 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
-          What Our Students Say
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard 
-              key={index}
-              testimonial={testimonial}
-            />
+      <div className="max-w-7xl mx-auto relative z-10">
+         <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 relative">
+            <span className="relative inline-block">
+              Our Portfolio
+              <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-600/30 -z-10"></span>
+            </span>
+          </h2>
+        </div>
+
+        {/* Horizontal Scroll Container */}
+        <div className="flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-blue-900 scrollbar-track-blue-100 pb-4">
+          {portfolioItems.map((item, index) => (
+            <PortfolioCard key={index} item={item} />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-function TestimonialCard({ testimonial }) {
-  const [hover, setHover] = useState(false)
+function PortfolioCard({ item }) {
+  const [hover, setHover] = useState(false);
 
   return (
-    <div 
-      className={`bg-white p-8 rounded-xl shadow-md transition-all duration-300 ${
-        hover ? '-translate-y-2 shadow-lg' : ''
+    <div
+      className={`min-w-[300px] max-w-xs bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ${
+        hover ? "-translate-y-2 shadow-xl" : ""
       }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="flex items-center mb-6">
-        <img 
-          src={testimonial.image} 
-          alt={testimonial.name} 
-          className="w-16 h-16 rounded-full object-cover border-2 border-yellow-400 mr-4"
-        />
-        <div>
-          <h4 className="font-bold text-blue-900">{testimonial.name}</h4>
-          <p className="text-gray-600 text-sm">{testimonial.role}</p>
+      <div
+        className="h-48 bg-cover bg-center"
+        style={{ backgroundImage: `url(${item.image})` }}
+      ></div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-blue-900 mb-2">
+          {item.title}
+        </h3>
+        <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {item.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="bg-gray-100 text-gray-700 px-3 py-1 text-xs rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
-      
-      <p className="italic mb-6 relative">
-        <i className="fas fa-quote-left text-yellow-400 text-xl absolute -top-4 -left-2 opacity-30"></i>
-        {testimonial.quote}
-        <i className="fas fa-quote-right text-yellow-400 text-xl absolute -bottom-4 -right-2 opacity-30"></i>
-      </p>
-      
-      <div className="text-yellow-400">
-        {[...Array(5)].map((_, i) => (
-          <i 
-            key={i}
-            className={`fas ${i < Math.floor(testimonial.rating) ? 'fa-star' : testimonial.rating % 1 !== 0 && i === Math.floor(testimonial.rating) ? 'fa-star-half-alt' : 'fa-star'} ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-          ></i>
-        ))}
-      </div>
     </div>
-  )
+  );
 }

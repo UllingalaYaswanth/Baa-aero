@@ -1,87 +1,89 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Internship() {
-  const benefits = [
+  const programs = [
     {
-      icon: 'fas fa-laptop-code',
-      title: 'Practical Training',
-      description: 'Work with actual drone equipment and software used in industry applications.'
+      duration: "1 Month",
+      title: "Introductory Drone Program",
+      benefits: [
+        "Basics of drone operation",
+        "Introduction to drone types and usage",
+        "Flight safety fundamentals",
+        "Hands-on mini drone practice"
+      ],
     },
     {
-      icon: 'fas fa-user-tie',
-      title: 'Industry Mentors',
-      description: 'Learn from experienced professionals with years of drone technology expertise.'
+      duration: "4 Months",
+      title: "Advanced Drone Internship",
+      benefits: [
+        "Drone assembly and repair",
+        "Flight mission planning",
+        "Software integration & calibration",
+        "Project-based assessments"
+      ],
     },
     {
-      icon: 'fas fa-certificate',
-      title: 'Certification',
-      description: 'Earn a valuable certificate upon successful completion of the internship.'
+      duration: "6 Months",
+      title: "Comprehensive Drone Certification",
+      benefits: [
+        "All advanced training modules",
+        "Legal compliance and regulations",
+        "Live industrial project",
+        "Official internship certification"
+      ],
     },
-    {
-      icon: 'fas fa-briefcase',
-      title: 'Job Opportunities',
-      description: 'Top performers may receive job offers or recommendations for employment.'
-    }
-  ]
+  ];
 
   return (
-    <section id="internship" className="py-20 px-8 bg-gradient-to-r from-blue-900 to-red-700 text-white relative">
-      {/* Background elements */}
+    <section id="internship" className="py-20 px-6 bg-gradient-to-r from-blue-900 to-red-700 text-white relative">
+      {/* Decorative Circles */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/5 left-1/10 w-24 h-24 rounded-full bg-yellow-400/10 animate-float"></div>
-        <div className="absolute bottom-1/3 right-15 w-36 h-36 rounded-full bg-white/10 animate-float delay-2000"></div>
+        <div className="absolute top-1/4 left-1/10 w-20 h-20 bg-yellow-300/10 rounded-full animate-ping"></div>
+        <div className="absolute bottom-1/3 right-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-          Drone Technology Internship Program
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-white to-yellow-400 rounded-full"></span>
-        </h2>
-        
-        <p className="text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          Gain hands-on experience in the exciting field of drone technology with our comprehensive internship program. 
-          Work on real-world projects and build your career in this rapidly growing industry.
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6">Drone Internship & Certification Programs</h2>
+        <p className="text-lg max-w-3xl mx-auto mb-12">
+          Choose from beginner to professional programs tailored to different durations and goals.
         </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
-          {benefits.map((benefit, index) => (
-            <InternshipBenefit 
-              key={index}
-              benefit={benefit}
-            />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {programs.map((program, idx) => (
+            <ProgramCard key={idx} program={program} />
           ))}
         </div>
-        
-        <button className="mt-12 px-8 py-3 bg-yellow-400 text-gray-800 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden">
-          <span className="btn-wave"></span>
-          Apply for Internship
+
+        <button className="mt-12 px-8 py-3 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300">
+          Apply Now
         </button>
       </div>
+      
     </section>
-  )
+    
+  );
 }
 
-function InternshipBenefit({ benefit }) {
-  const [hover, setHover] = useState(false)
-  const [iconHover, setIconHover] = useState(false)
+function ProgramCard({ program }) {
+  const [hover, setHover] = useState(false);
 
   return (
-    <div 
-      className={`bg-white/10 p-8 rounded-xl backdrop-blur-sm transition-all duration-500 transform-style-preserve-3d ${
-        hover ? 'bg-white/20 -translate-y-2 rotate-x-5' : ''
+    <div
+      className={`bg-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-500 transform ${
+        hover ? "scale-105 shadow-lg" : ""
       }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <i 
-        className={`${benefit.icon} text-3xl mb-4 text-yellow-400 transition-all duration-300 ${
-          iconHover ? 'rotate-12 scale-125' : ''
-        }`}
-        onMouseEnter={() => setIconHover(true)}
-        onMouseLeave={() => setIconHover(false)}
-      ></i>
-      <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-      <p className="text-white/80">{benefit.description}</p>
+      <h3 className="text-xl font-bold mb-1">{program.title}</h3>
+      <p className="text-sm text-white/70 italic mb-3">{program.duration} Program</p>
+      <ul className="text-left text-white/90 space-y-2 text-sm">
+        {program.benefits.map((b, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <span className="text-yellow-400">✓</span> {b}
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }

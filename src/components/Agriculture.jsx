@@ -12,7 +12,7 @@ export default function Agriculture() {
         <div className="absolute bottom-1/10 left-5 w-36 h-36 rounded-full bg-blue-900/5 animate-pulse delay-2000"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 relative inline-block">
@@ -46,18 +46,12 @@ export default function Agriculture() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => navigate('/agriculture-drones')}
-                className="px-8 py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
-              >
-                <span className="btn-wave"></span>
-                Explore AGRONE-X Drones
-              </button>
-              <button 
-                onClick={() => navigate('/contact')}
-                className="px-8 py-3 border-2 border-blue-900 text-blue-900 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors duration-300"
-              >
-                Get Custom Quote
-              </button>
+              onClick={() => navigate('/agriculture-drones')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
+            >
+              <span className="btn-wave"></span>
+              Explore AGRONE-X Drones
+            </button>
             </div>
           </div>
           
@@ -70,13 +64,7 @@ export default function Agriculture() {
             ></div>
 
             
-            <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-yellow-400 to-red-700 w-36 h-36 rounded-full flex items-center justify-center text-white font-bold shadow-xl animate-pulse">
-              <div className="text-center">
-                <div className="text-3xl">50%</div>
-                <div>More Flight Time</div>
-              </div>
-            </div>
-
+          
             <div className="absolute -top-6 -left-6 bg-white p-3 rounded-lg shadow-md">
               <div className="flex items-center">
                 <div className="bg-blue-900 text-white p-2 rounded-full mr-2">
@@ -89,34 +77,6 @@ export default function Agriculture() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Technical Highlights */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <TechHighlight 
-            icon="fas fa-weight" 
-            value="24.9kg" 
-            label="Max Takeoff Weight" 
-            color="blue" 
-          />
-          <TechHighlight 
-            icon="fas fa-tint" 
-            value="10L" 
-            label="Payload Capacity" 
-            color="red" 
-          />
-          <TechHighlight 
-            icon="fas fa-ruler-combined" 
-            value="1300×1300×550mm" 
-            label="Unfolded Size" 
-            color="yellow" 
-          />
-          <TechHighlight 
-            icon="fas fa-map-marked-alt" 
-            value="500m" 
-            label="Operating Range" 
-            color="green" 
-          />
         </div>
       </div>
     </section>

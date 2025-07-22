@@ -84,29 +84,6 @@ export default function Footer() {
               </p>
             </address>
           </div>
-
-          <div>
-            <h4 className="text-lg font-bold text-yellow-400 mb-4 relative inline-block">
-              Newsletter
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></span>
-            </h4>
-            <p className="text-white/80 mb-4">
-              Subscribe to our newsletter for the latest updates on drone technology.
-            </p>
-            <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Your Email" 
-                className="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-800"
-              />
-              <button 
-                type="submit"
-                className="px-4 py-2 bg-yellow-400 text-gray-800 rounded-r-lg hover:bg-yellow-500 transition-colors duration-300"
-              >
-                <i className="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">

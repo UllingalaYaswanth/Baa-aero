@@ -126,11 +126,17 @@ export default function Navbar() {
     { id: 'agriculture', label: 'Agriculture' },
     { id: 'internship', label: 'Internship' },
     { id: 'contact', label: 'Contact' },
+    { id: 'about', label: 'About' },
   ]
 
   const handleNavClick = (id) => {
     setActiveLink(id)
     setIsMobileMenuOpen(false)
+
+    if (id === 'about') {
+      navigate('/about')
+      return
+    }
 
     if (location.pathname !== '/') {
       navigate(`/?scrollTo=${id}`)
@@ -139,19 +145,22 @@ export default function Navbar() {
     }
   }
 
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 py-4 px-4 shadow-lg backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <div >
+          <a href='/' className="flex items-center">
           <img 
-            src="https://via.placeholder.com/50" 
+            src="/baa-logo.png" 
             alt="Logo" 
             className="h-12 mr-4 rounded-full transition-transform duration-500 hover:rotate-360"
           />
           <h1 className="text-white text-xl md:text-2xl font-bold text-shadow">
             Bhavyansh Aero Academy
           </h1>
+          </a>
         </div>
 
         {/* Desktop Navigation */}

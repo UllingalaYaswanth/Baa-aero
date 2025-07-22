@@ -82,97 +82,156 @@ export const servicesData = [
       }
     ]
   },
-  {
-    id: 'agri-spraying',
-    title: 'Agricultural Drone Spraying Services',
-    icon: 'fas fa-leaf',
-    description:
-      'We deliver precision agricultural spraying using GPS-guided drones to reduce chemical usage and maximize crop yield.',
-    gradient: 'from-green-700 to-yellow-600',
-    image:
-      'https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    features: [
-      {
-        icon: 'fas fa-tachometer-alt',
-        title: 'Precision Application',
-        description:
-          'Our drones use advanced GPS and sensor technology to apply chemicals with centimeter-level accuracy.'
-      },
-      {
-        icon: 'fas fa-leaf',
-        title: 'Reduced Chemical Usage',
-        description:
-          'By targeting only the areas that need treatment, we significantly reduce chemical usage.'
-      }
-    ],
-    timeline: [
-      {
-        step: 1,
-        title: 'Field Assessment',
-        description: 'Our team conducts a thorough assessment of your fields'
-      },
-      {
-        step: 2,
-        title: 'Flight Planning',
-        description: 'We create customized flight paths'
-      },
-      {
-        step: 3,
-        title: 'Precision Spraying',
-        description: 'Our drones execute the treatment plan with precision'
-      },
-      {
-        step: 4,
-        title: 'Post-Treatment Analysis',
-        description:
-          'We provide detailed reports with recommendations'
-      }
-    ]
-  },
-  {
-    id: 'custom-solutions',
-    title: 'Custom Drone Solutions',
-    icon: 'fas fa-cogs',
-    description:
-      'We provide innovative, end-to-end drone solutions tailored to the unique needs of your industry.',
-    gradient: 'from-purple-800 to-indigo-700',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    features: [
-      {
-        icon: 'fas fa-lightbulb',
-        title: 'Innovative Design',
-        description:
-          'We approach each project with fresh eyes, developing innovative solutions.'
-      },
-      {
-        icon: 'fas fa-cogs',
-        title: 'End-to-End Service',
-        description:
-          'From concept to implementation, we handle every aspect.'
-      }
-    ],
-    industries: [
-      {
-        icon: 'fas fa-industry',
-        title: 'Industrial',
-        description: 'Inspection, monitoring, and maintenance solutions'
-      },
-      {
-        icon: 'fas fa-tractor',
-        title: 'Agriculture',
-        description: 'Custom solutions for precision farming'
-      },
-      {
-        icon: 'fas fa-building',
-        title: 'Construction',
-        description: 'Site surveying and progress monitoring'
-      },
-      {
-        icon: 'fas fa-broadcast-tower',
-        title: 'Telecom',
-        description: 'Tower inspections with specialized payloads'
-      }
-    ]
+ {
+  id: 'agri-spraying',
+  title: 'Agricultural Drone Spraying Services',
+  icon: 'fas fa-leaf',
+  description:
+    'We deliver precision agricultural spraying using GPS-guided drones to reduce chemical usage and maximize crop yield.',
+  gradient: 'from-green-700 to-yellow-600',
+  image:
+    '/agri.png',
+  features: [
+    {
+      icon: 'fas fa-tachometer-alt',
+      title: 'Precision Application',
+      description:
+        'Our drones use advanced GPS and sensor technology to apply chemicals with centimeter-level accuracy, ensuring even coverage and minimizing waste.',
+      image: 'https://cdn-icons-png.flaticon.com/512/709/709592.png'
+    },
+    {
+      icon: 'fas fa-leaf',
+      title: 'Reduced Chemical Usage',
+      description:
+        'By targeting only the areas that need treatment and using ultra-low volume (ULV) spraying technology, we significantly reduce chemical usage while maintaining effectiveness.',
+      image: 'https://cdn-icons-png.flaticon.com/512/2907/2907393.png'
+    }
+  ],
+  timeline: [
+    {
+      step: 1,
+      title: 'Field Assessment',
+      description: 'Our team conducts a thorough assessment of your fields using multispectral imaging to identify problem areas and determine optimal treatment plans.'
+    },
+    {
+      step: 2,
+      title: 'Flight Planning',
+      description: 'We create customized flight paths that ensure complete coverage while avoiding obstacles and no-spray zones.'
+    },
+    {
+      step: 3,
+      title: 'Precision Spraying',
+      description: 'Our drones execute the treatment plan with millimeter precision, adjusting spray volume and droplet size based on real-time conditions.'
+    },
+    {
+      step: 4,
+      title: 'Post-Treatment Analysis',
+      description: 'After treatment, we provide detailed reports with before-and-after comparisons and recommendations for future applications.'
+    }
+  ],
+  benefits: [
+    {
+      icon: 'fas fa-rupee-sign',
+      title: 'Cost Effective',
+      description: 'Reduce chemical costs by up to 60% and labor costs by up to 80% compared to traditional methods.'
+    },
+    {
+      icon: 'fas fa-clock',
+      title: 'Time Saving',
+      description: 'Cover up to 60 acres per day with a single drone, significantly faster than manual spraying.'
+    },
+    {
+      icon: 'fas fa-tree',
+      title: 'Environmental',
+      description: 'Minimize chemical runoff and environmental impact with targeted application.'
+    },
+    {
+      icon: 'fas fa-user-shield',
+      title: 'Safety',
+      description: 'Eliminate exposure risks for workers by removing the need for manual spraying.'
+    }
+  ],
+  cta: {
+    title: 'Transform Your Farming Operations',
+    description: 'Contact us today to schedule a consultation and see how drone spraying can benefit your farm.',
+    buttonText: 'Request Free Consultation'
   }
+}
+,
+{
+  id: 'custom-solutions',
+  title: 'Custom Drone Solutions',
+  icon: 'fas fa-cogs',
+  description:
+    'Our custom drone solutions are tailored to meet the unique challenges of your industry. Whether you need specialized sensors, custom payloads, or unique flight capabilities, our engineering team can design and implement a solution that fits your exact requirements.',
+  gradient: 'from-purple-800 to-indigo-700',
+  image:
+    '/Drone-mapping.jpg',
+  features: [
+    {
+      icon: 'fas fa-lightbulb',
+      title: 'Innovative Design',
+      description:
+        'We approach each project with fresh eyes, developing innovative solutions that leverage the latest drone technology to solve your specific challenges.'
+    },
+    {
+      icon: 'fas fa-cogs',
+      title: 'End-to-End Service',
+      description:
+        'From initial concept to final implementation, we handle every aspect of your custom drone solution, including regulatory compliance and operator training.'
+    }
+  ],
+  industries: [
+    {
+      icon: 'fas fa-industry',
+      title: 'Industrial',
+      description: 'Inspection, monitoring, and maintenance solutions for factories, plants, and infrastructure.'
+    },
+    {
+      icon: 'fas fa-tractor',
+      title: 'Agriculture',
+      description: 'Custom solutions for precision farming, crop monitoring, and livestock management.'
+    },
+    {
+      icon: 'fas fa-building',
+      title: 'Construction',
+      description: 'Site surveying, progress monitoring, and volumetric measurements.'
+    },
+    {
+      icon: 'fas fa-broadcast-tower',
+      title: 'Telecom',
+      description: 'Tower inspections and maintenance with specialized payloads.'
+    }
+  ],
+  process: [
+    {
+      title: 'Requirement Analysis',
+      description: 'We start by thoroughly understanding your operational challenges and desired outcomes.'
+    },
+    {
+      title: 'Solution Design',
+      description: 'Our engineers design a tailored solution, selecting the right platform, sensors, and software.'
+    },
+    {
+      title: 'Prototype Development',
+      description: 'We build and test a prototype to validate the solution before full implementation.'
+    },
+    {
+      title: 'Deployment & Training',
+      description: 'We deploy the solution and provide comprehensive training for your team.'
+    }
+  ],
+  gallery: [
+    '/industry.png',
+    '/agri.png',
+    '/const.png',
+    '/telecom.png'
+  ],
+  cta: {
+    title: 'Need a Custom Drone Solution?',
+    description: 'Our team is ready to discuss your unique requirements and develop a tailored solution.',
+    buttonText: 'Schedule Consultation'
+  }
+}
+
 ];
