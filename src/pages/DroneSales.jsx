@@ -223,6 +223,10 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { servicesData } from '../data/servicesData';
+import survelliance from "../assets/survelliance.jpg"
+import agriculture from "../assets/agronx.jpeg"
+import commercial from "../assets/commercial.jpg"
+import spare_parts from "../assets/spare_parts.png"
 
 export default function DroneSales() {
   const service = servicesData.find(s => s.id === 'drone-sales');
@@ -230,27 +234,6 @@ export default function DroneSales() {
   return (
     <>
       <Navbar />
-      
-      {/* Hero Section */}
-      {/* <div className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{service.title}</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
-              Premium drone solutions with cutting-edge technology and unparalleled support
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-white text-blue-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Explore Models
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Book Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* Features Grid */}
       <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -265,7 +248,13 @@ export default function DroneSales() {
           {/* Agricultural Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div className="h-48 bg-green-600 flex items-center justify-center">
-              <i className="fas fa-seedling text-6xl text-white opacity-90"></i>
+              <img 
+                src={agriculture} 
+                alt="Drone parts" 
+                className="w-full h-full object-cover"
+              />
+              {/* <i className="fas fa-seedling text-6xl text-white opacity-90"></i> */}
+              
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Agricultural Drones</h3>
@@ -289,7 +278,11 @@ export default function DroneSales() {
           {/* Surveillance Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div className="h-48 bg-blue-600 flex items-center justify-center">
-              <i className="fas fa-shield-alt text-6xl text-white opacity-90"></i>
+              <img 
+                src={survelliance} 
+                alt="Drone parts" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Surveillance Drones</h3>
@@ -313,7 +306,11 @@ export default function DroneSales() {
           {/* Commercial Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div className="h-48 bg-purple-600 flex items-center justify-center">
-              <i className="fas fa-business-time text-6xl text-white opacity-90"></i>
+              <img 
+                src={commercial} 
+                alt="Drone parts" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Commercial Drones</h3>
@@ -386,7 +383,7 @@ export default function DroneSales() {
             </div>
             <div className="lg:w-1/2 h-96 lg:h-auto">
               <img 
-                src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src={spare_parts} 
                 alt="Drone parts" 
                 className="w-full h-full object-cover"
               />

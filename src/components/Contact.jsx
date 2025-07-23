@@ -52,7 +52,7 @@ export default function Contact() {
               <ContactItem 
                 icon="fas fa-map-marker-alt" 
                 title="Address" 
-                text="123 Drone Street, Tech City, India 560001" 
+                text="IIAM, MVP Colony, Visakhapatnam, Andhra Pradesh 530017" 
               />
               <ContactItem 
                 icon="fas fa-phone-alt" 

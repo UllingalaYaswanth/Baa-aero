@@ -1,15 +1,15 @@
 import agrispray from '../assets/agri.png'
 import customdrone from '../assets/Drone-mapping.jpg'
-import industry from '../assets/industry.png'
+import industry from '../assets/industry.webp'
 import construct from '../assets/const.png'
-import telecom from '../assets/telecom.png'
+import telecom from '../assets/telecom.jpg'
 export const servicesData = [
   {
     id: 'drone-sales',
     title: 'Drone Sales & Services',
     icon: 'fas fa-shopping-cart',
     description:
-      'We offer the latest drone models from top manufacturers along with comprehensive maintenance, repair services, and genuine spare parts.',
+      'We offer the latest drone models from top manufacturers along with comprehensive maintenance, repair services, and  spare parts.',
     gradient: 'from-blue-900 to-blue-700',
     image:
       'https://images.unsplash.com/photo-1579829366248-204fe8413f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
@@ -168,7 +168,7 @@ export const servicesData = [
   title: 'Custom Drone Solutions',
   icon: 'fas fa-cogs',
   description:
-    'Our custom drone solutions are tailored to meet the unique challenges of your industry. Whether you need specialized sensors, custom payloads, or unique flight capabilities, our engineering team can design and implement a solution that fits your exact requirements.',
+    'We craft advanced custom drone solutions with tailored sensors, payloads, and flight capabilities to meet your industries exact needs.',
   gradient: 'from-blue-900 to-blue-700',
   image:
     customdrone,
