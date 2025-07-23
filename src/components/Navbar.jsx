@@ -1,116 +1,7 @@
-// import { useState } from 'react'
-// import { useNavigate, useLocation } from 'react-router-dom'
-
-// export default function Navbar() {
-//   const [activeLink, setActiveLink] = useState('home')
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-//   const navigate = useNavigate()
-//   const location = useLocation()
-
-//   const navLinks = [
-//     { id: 'home', label: 'Home' },
-//     { id: 'services', label: 'Services' },
-//     { id: 'courses', label: 'Courses' },
-//     { id: 'agriculture', label: 'Agriculture' },
-//     { id: 'internship', label: 'Internship' },
-//     { id: 'contact', label: 'Contact' },
-//   ]
-
-//   const handleNavClick = (id) => {
-//     setActiveLink(id)
-//     setIsMobileMenuOpen(false)
-
-//     if (location.pathname !== '/') {
-//       navigate(`/?scrollTo=${id}`)
-//     } else {
-//       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-//     }
-//   }
-
-//   return (
-//     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 py-4 px-4 shadow-lg backdrop-blur-sm">
-//       <div className="max-w-6xl mx-auto flex justify-between items-center">
-//         {/* Logo */}
-//         <div className="flex items-center">
-//           <img 
-//             src="https://via.placeholder.com/50" 
-//             alt="Logo" 
-//             className="h-12 mr-4 rounded-full transition-transform duration-500 hover:rotate-360"
-//           />
-//           <h1 className="text-white text-xl md:text-2xl font-bold text-shadow">
-//             Bhavyansh Aero Academy
-//           </h1>
-//         </div>
-
-//         {/* Desktop Navigation */}
-//         <div className="hidden md:flex space-x-6">
-//           {navLinks.map(link => (
-//             <NavLink 
-//               key={link.id}
-//               id={link.id}
-//               label={link.label}
-//               active={activeLink === link.id}
-//               onClick={() => handleNavClick(link.id)}
-//             />
-//           ))}
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <button
-//           onClick={() => setIsMobileMenuOpen(prev => !prev)}
-//           className="md:hidden text-white focus:outline-none text-2xl"
-//         >
-//           <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-//         </button>
-//       </div>
-
-//       {/* Mobile Dropdown */}
-//       {isMobileMenuOpen && (
-//         <div className="md:hidden mt-4 px-4 space-y-4 bg-blue-950/90 py-4 rounded-lg shadow-md">
-//           {navLinks.map(link => (
-//             <button
-//               key={link.id}
-//               onClick={() => handleNavClick(link.id)}
-//               className={`block w-full text-left text-white font-medium py-1 transition-all duration-300 ${
-//                 activeLink === link.id ? 'text-yellow-300' : ''
-//               }`}
-//             >
-//               {link.label}
-//             </button>
-//           ))}
-//         </div>
-//       )}
-//     </nav>
-//   )
-// }
-
-// function NavLink({ id, label, active, onClick }) {
-//   const [hover, setHover] = useState(false)
-
-//   return (
-//     <button 
-//       onClick={onClick}
-//       className={`text-white font-medium relative py-1 transition-all duration-300 ${
-//         active ? 'text-yellow-300' : ''
-//       }`}
-//       onMouseEnter={() => setHover(true)}
-//       onMouseLeave={() => setHover(false)}
-//     >
-//       {label}
-//       <span 
-//         className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${
-//           hover || active ? 'w-full' : 'w-0'
-//         }`}
-//       />
-//     </button>
-//   )
-// }
-
-
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { servicesData } from '../data/servicesData'
-
+import logo from '../assets/baa-logo.png'
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState('home')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -147,13 +38,13 @@ export default function Navbar() {
 
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 py-4 px-4 shadow-lg backdrop-blur-sm">
+    <nav className="fixed top-0 w-full z-50 bg-[#232425] py-4 px-4 shadow-lg backdrop-blur-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div >
           <a href='/' className="flex items-center">
           <img 
-            src="/baa-logo.png" 
+            src={logo}
             alt="Logo" 
             className="h-12 mr-4 rounded-full transition-transform duration-500 hover:rotate-360"
           />

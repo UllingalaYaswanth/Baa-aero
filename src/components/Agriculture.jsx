@@ -17,7 +17,7 @@ export default function Agriculture() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 relative inline-block">
               Smart Farming with ARIES AGRONE-X
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
+              {/* <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-900 via-red-700 to-red-400 rounded-full"></span> */}
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -47,7 +47,7 @@ export default function Agriculture() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
               onClick={() => navigate('/agriculture-drones')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
+              className="px-8 py-3 bg-[#003B73] text-white rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 relative overflow-hidden"
             >
               <span className="btn-wave"></span>
               Explore AGRONE-X Drones

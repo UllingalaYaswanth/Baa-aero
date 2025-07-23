@@ -1,4 +1,5 @@
 import { useState } from "react"
+import herobg from '../assets/hero.mp4'
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/hero.mp4"
+        src={herobg}
         autoPlay
         loop
         muted

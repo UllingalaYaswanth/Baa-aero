@@ -1,3 +1,8 @@
+import agrispray from '../assets/agri.png'
+import customdrone from '../assets/Drone-mapping.jpg'
+import industry from '../assets/industry.png'
+import construct from '../assets/const.png'
+import telecom from '../assets/telecom.png'
 export const servicesData = [
   {
     id: 'drone-sales',
@@ -5,7 +10,7 @@ export const servicesData = [
     icon: 'fas fa-shopping-cart',
     description:
       'We offer the latest drone models from top manufacturers along with comprehensive maintenance, repair services, and genuine spare parts.',
-    gradient: 'from-blue-900 to-red-700',
+    gradient: 'from-blue-900 to-blue-700',
     image:
       'https://images.unsplash.com/photo-1579829366248-204fe8413f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     features: [
@@ -88,9 +93,9 @@ export const servicesData = [
   icon: 'fas fa-leaf',
   description:
     'We deliver precision agricultural spraying using GPS-guided drones to reduce chemical usage and maximize crop yield.',
-  gradient: 'from-green-700 to-yellow-600',
+  gradient: 'from-blue-900 to-blue-700',
   image:
-    '/agri.png',
+    agrispray,
   features: [
     {
       icon: 'fas fa-tachometer-alt',
@@ -164,9 +169,9 @@ export const servicesData = [
   icon: 'fas fa-cogs',
   description:
     'Our custom drone solutions are tailored to meet the unique challenges of your industry. Whether you need specialized sensors, custom payloads, or unique flight capabilities, our engineering team can design and implement a solution that fits your exact requirements.',
-  gradient: 'from-purple-800 to-indigo-700',
+  gradient: 'from-blue-900 to-blue-700',
   image:
-    '/Drone-mapping.jpg',
+    customdrone,
   features: [
     {
       icon: 'fas fa-lightbulb',
@@ -222,10 +227,10 @@ export const servicesData = [
     }
   ],
   gallery: [
-    '/industry.png',
-    '/agri.png',
-    '/const.png',
-    '/telecom.png'
+    industry,
+    agrispray,
+    construct,
+    telecom
   ],
   cta: {
     title: 'Need a Custom Drone Solution?',

@@ -26,7 +26,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-blue-900 text-white py-12 px-8 relative">
+    <footer className="bg-[#232425] text-white py-12 px-8 relative">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/5 left-1/10 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>

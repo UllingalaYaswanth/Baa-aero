@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-8 bg-white relative">
+    <section id="contact" className="py-20 px-8 bg-white relative bg-[linear-gradient(135deg,_#f5f7fa_0%,_#c3cfe2_100%)]">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/5 left-5 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
@@ -73,11 +73,11 @@ export default function Contact() {
               </h4>
               
               <div className="flex space-x-4">
-                <SocialIcon platform="facebook" />
+                
                 <SocialIcon platform="twitter" />
                 <SocialIcon platform="instagram" />
                 <SocialIcon platform="linkedin" />
-                <SocialIcon platform="youtube" />
+                
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function Contact() {
               
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-900 to-red-700 text-white rounded-full font-bold hover:scale-102 transition-transform duration-300 relative overflow-hidden"
+                className="w-full py-3 bg-[#1a2a6c] text-white rounded-full font-bold hover:scale-102 transition-transform duration-300 relative overflow-hidden"
               >
                 <span className="btn-wave"></span>
                 Send Message

@@ -50,7 +50,7 @@ export default function Courses() {
   ];
 
   return (
-    <section id="courses" className="py-20 px-8 bg-gray-50 relative">
+    <section id="courses"   className="py-14 px-8 relative bg-[linear-gradient(135deg,_#f5f7fa_0%,_#c3cfe2_100%)]">
       {/* Decorative Background Bubbles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 right-5 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>

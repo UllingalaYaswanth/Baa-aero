@@ -88,7 +88,7 @@ export default function CustomSolutionsPage() {
             ))}
           </div>
 
-          <div className="cta-section text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#b21f1f] text-white">
+          <div className="cta-section text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#1a2a6c] text-white">
             <h3 className="text-2xl font-bold mb-4">{service.cta.title}</h3>
             <p className="mb-6">{service.cta.description}</p>
             <button

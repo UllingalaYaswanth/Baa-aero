@@ -2,16 +2,22 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+import agronx from '../assets/agronx.jpeg'
+import agrispray from '../assets/agrispray.jpg'
+import Granular from '../assets/Granular.png'
+import agrox_open from '../assets/agrox-open.jpeg'
+import agrox_fold from '../assets/agrox-fold.jpeg'
+import field_analyze from '../assets/field-analyze.jpg'
+import brochure from '../assets/drone-brochure.pdf'
 export default function AgriculturePage() {
   const navigate = useNavigate();
 
   const droneImages = {
-    main: '/agronx.jpeg',
-    spraying: '/agrispray.jpg',
-    spreading: '/Granular.png',
-    hexacopter: '/agrox-open.jpeg',
-    folded: '/agrox-fold.jpeg'
+    main: agronx,
+    spraying: agrispray,
+    spreading: Granular,
+    hexacopter: agrox_open,
+    folded: agrox_fold
   };
 
   const services = [
@@ -30,7 +36,7 @@ export default function AgriculturePage() {
     {
       title: 'Field Analytics',
       description: 'Advanced flight controller with autonomous modes for field mapping and analysis.',
-      image: '/field-analyze.jpg',
+      image: field_analyze,
       icon: 'fas fa-map-marked-alt'
     }
   ];
@@ -193,12 +199,12 @@ export default function AgriculturePage() {
           </div>
 
           {/* CTA Section */}
-          <div className="cta-section text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#b21f1f] text-white mb-12">
+          <div className="cta-section text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#055C9D] text-white mb-12">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Farming?</h3>
             <p className="mb-6">Our team of aeronautical engineers will help you implement the perfect drone solution for your agricultural needs.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
-                href="/drone-brochure.pdf" // Path to your brochure file
+                href={brochure}
                 download 
                 className="px-6 py-3 border-2 border-white text-white font-semibold rounded-full shadow-md hover:bg-white hover:text-[#1a2a6c] transition-all text-center"
               >

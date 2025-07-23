@@ -35,7 +35,7 @@ export default function Internship() {
   ];
 
   return (
-    <section id="internship" className="py-20 px-6 bg-gradient-to-r from-blue-900 to-red-700 text-white relative">
+    <section id="internship" className="py-20 px-6 bg-gradient-to-r from-gray-800 to-gray-500 text-white relative">
       {/* Decorative Circles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/10 w-20 h-20 bg-yellow-300/10 rounded-full animate-ping"></div>
@@ -54,7 +54,7 @@ export default function Internship() {
           ))}
         </div>
 
-        <button className="mt-12 px-8 py-3 bg-yellow-400 text-gray-900 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300">
+        <button className="mt-12 px-8 py-3 bg-[#FFDB15] text-gray-900 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300">
           Apply Now
         </button>
       </div>

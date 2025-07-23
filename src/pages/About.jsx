@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import about from '../assets/about.jpeg'
 export default function About() {
   return (
     <div>
@@ -28,7 +28,7 @@ export default function About() {
             </p>
           </div>
           <img
-            src="/about.jpeg"
+            src={about}
             alt="Drone flying"
             className="w-full h-64 object-cover rounded-xl shadow-lg"
           />
