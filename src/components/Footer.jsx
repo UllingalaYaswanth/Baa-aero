@@ -152,20 +152,27 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto relative z-10 flex">
         {/* Logo Section - Added this new div for the logo */}
         <div className="w-1/4 pr-8 hidden md:block">
-          <div className="bg-[#4b5361] p-4 rounded-lg h-full flex items-center justify-center">
+          <div className="p-4 rounded-lg h-full flex items-center justify-center">
               <img 
                 src={logo}
                 alt="Bhavyansh Aero Academy Logo"
                 className="max-w-full h-auto"
               />
-
-           
           </div>
         </div>
 
         {/* Content Section - Moved this to the right */}
         <div className="w-full md:w-3/4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className=" pr-8  md:hidden">
+          <div className="p-4 rounded-lg flex items-center justify-center">
+              <img 
+                src={logo}
+                alt="Bhavyansh Aero Academy Logo"
+                className="max-w-full h-auto"
+              />
+          </div>
+        </div>
             <div>
               <h3 className="text-xl font-bold text-yellow-400 mb-4 relative inline-block">
                 Bhavyansh Aero Academy

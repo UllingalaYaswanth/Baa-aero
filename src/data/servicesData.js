@@ -3,6 +3,11 @@ import customdrone from '../assets/Drone-mapping.jpg'
 import industry from '../assets/industry.webp'
 import construct from '../assets/const.png'
 import telecom from '../assets/telecom.jpg'
+import survelliance from '../assets/survelliance.jpg';
+import Drone_mapping from '../assets/Drone-mapping.jpg';
+import marrage from '../assets/marrage.jpeg';
+import droneparts from '../assets/droneparts.jpg';
+import id from '../assets/id.jpg';
 export const servicesData = [
   {
     id: 'drone-sales',
@@ -41,7 +46,7 @@ export const servicesData = [
         icon: 'fas fa-seedling',
         title: 'Agricultural Drones',
         description: 'Specialized drones for precision farming with crop spraying and monitoring capabilities',
-        image: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        image: agrispray,
         subFeatures: [
           'Multi-spectral cameras for crop health analysis',
           'Precision spraying systems',
@@ -53,7 +58,7 @@ export const servicesData = [
         icon: 'fas fa-shield-alt',
         title: 'Surveillance Drones',
         description: 'Advanced security drones with thermal imaging and long flight times',
-        image: 'https://images.unsplash.com/photo-1606220945778-b6820e23cd30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        image: survelliance,
         subFeatures: [
           'High-resolution zoom cameras',
           'Thermal imaging for night operations',
@@ -65,25 +70,25 @@ export const servicesData = [
         icon: 'fas fa-camera',
         title: 'Photography Drones',
         description: 'High-resolution cameras with gimbal stabilization for professional imaging',
-        image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+        image: marrage
       },
       {
         icon: 'fas fa-map-marked-alt',
         title: 'Mapping Drones',
         description: 'Equipped with advanced sensors for surveying and 3D mapping',
-        image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+        image: Drone_mapping
       },
       {
         icon: 'fas fa-industry',
         title: 'Industrial Drones',
         description: 'Rugged drones for inspection and monitoring in challenging environments',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+        image: id
       },
       {
         icon: 'fas fa-cogs',
         title: 'Drone Accessories',
         description: 'Complete range of accessories including batteries, cases, and controllers',
-        image: 'https://images.unsplash.com/photo-1598124146163-36819847286d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+        image: droneparts
       }
     ]
   },
