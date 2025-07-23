@@ -17,12 +17,11 @@ export default function Agriculture() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 relative inline-block">
-              Smart Farming with ARIES AGRONE-X
+              Smart Farming with AGRONE-X
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              ARIES Solutions is India's premier drone manufacturing company, bringing cutting-edge agricultural drone technology to farmers. 
-              Our AGRONE-X series combines aeronautical engineering excellence with simple operation for maximum field productivity.
+              India's premier AGRONE-X series of agricultural drones combines cutting-edge aeronautical engineering with user-friendly operation, designed to maximize productivity in the field. These drones bring advanced technology directly to farmers, empowering efficient and precise agricultural practices.
             </p>
             
             <div className="space-y-4 mb-8">

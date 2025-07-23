@@ -1,5 +1,6 @@
 import { useState } from "react"
 import herobg from '../assets/hero.mp4'
+import herodrone from '../assets/herodrone.png'
 
 export default function Hero() {
   return (
@@ -17,11 +18,11 @@ export default function Hero() {
         playsInline
       />
       {/* Animated drones */}
-      <div className="absolute inset-0 top-60 left-40">
+      <div className="absolute hidden md:block inset-0 top-60 left-40">
         <div 
           className="absolute top-1/5 left-1/10 w-24 h-24 bg-contain bg-no-repeat animate-float"
           style={{
-            backgroundImage: 'url(https://cdn-icons-png.flaticon.com/512/1163/1163477.png)'
+            backgroundImage: `url(${herodrone})`
           }}
         />
 
@@ -30,17 +31,17 @@ export default function Hero() {
             <div 
               className="absolute top-3/5 right-7/10 w-36 h-36 bg-contain bg-no-repeat animate-float"
               style={{
-                backgroundImage: 'url(https://cdn-icons-png.flaticon.com/512/1163/1163477.png)',
+                backgroundImage: `url(${herodrone})`,
                 animationDelay: '2s'
               }}
             />
           </div>
       <div className="relative z-10 max-w-6xl mx-auto px-8 text-center w-full">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 text-shadow animate__animated animate__fadeInDown">
-          Pioneering Drone Technology
+          Shaping the Sky of Tomorrow, Today
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto text-shadow animate__animated animate__fadeIn animate__delay-300ms">
-          Empowering the future with cutting-edge drone solutions for education, agriculture, and industry.
+          Advanced drone tech transforming education, agriculture, and industry.
         </p>
         
       </div>

@@ -10,7 +10,7 @@ export default function About() {
       <div className="absolute top-0 left-0 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-36 h-36 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
 
-      <div className="max-w-6xl mx-auto mt-10 relative z-10">
+      <div className="max-w-7xl mx-auto mt-10 relative z-10">
         {/* <h2 className="text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
           About Bhavyansh Aero Academy
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>

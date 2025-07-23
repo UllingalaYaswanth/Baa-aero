@@ -81,7 +81,7 @@ export default function AgriculturePage() {
       <div className="pt-20 px-8 bg-gray-100 min-h-screen animate__animated animate__fadeIn">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl mt-10 font-bold text-[#1a2a6c] mb-8 inline-block relative">
-            ARIES AGRONE-X Agricultural Drone
+            AGRONE-X Agricultural Drone
             <span className="absolute bottom-[-5px] left-0 w-full h-[3px] rounded bg-gradient-to-r from-[#1a2a6c] to-[#b21f1f]"></span>
           </h2>
 
@@ -196,21 +196,6 @@ export default function AgriculturePage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="cta-section text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#055C9D] text-white mb-12">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Farming?</h3>
-            <p className="mb-6">Our team of aeronautical engineers will help you implement the perfect drone solution for your agricultural needs.</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a 
-                href={brochure}
-                download 
-                className="px-6 py-3 border-2 border-white text-white font-semibold rounded-full shadow-md hover:bg-white hover:text-[#1a2a6c] transition-all text-center"
-              >
-                Download Brochure
-              </a>
-            </div>
           </div>
         </div>
       </div>
