@@ -68,6 +68,7 @@ export default function Footer() {
                 Shaping the Sky of Tomorrow, Today             
               </p>
               <p className="text-white/80">
+              
                 Learn. Fly. Lead the future of drone technology.
                 Hands-on, drone certification and internship programs for every level.
                 Bhavyansh Aero Academy – Your takeoff starts here.
