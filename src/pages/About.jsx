@@ -1,22 +1,25 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import about from '../assets/about.jpeg'
+import { useNavigate } from 'react-router-dom'
+
 export default function About() {
+
+  const navigate = useNavigate()
+
+const handleViewCourses = () => {
+  navigate('/?scrollTo=courses')
+}
+
   return (
     <div>
-        <Navbar/>
+      <Navbar/>
     <section className="relative mt-6 bg-gray-50 text-gray-800 py-20 px-6 overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-36 h-36 rounded-full bg-blue-900/10 animate-pulse delay-1000"></div>
 
       <div className="max-w-7xl mx-auto mt-10 relative z-10">
-        {/* <h2 className="text-4xl font-bold text-center text-blue-900 mb-12 relative inline-block">
-          About Bhavyansh Aero Academy
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 via-red-700 to-yellow-400 rounded-full"></span>
-        </h2> */}
-
-        {/* Company Intro */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="text-2xl font-semibold text-blue-900 mb-4">Who We Are</h3>
@@ -67,12 +70,12 @@ export default function About() {
           <p className="text-gray-600 mb-6">
             More than just a training center — Bhavyansh Aero Academy is a hub for aerial excellence, where knowledge meets innovation. Let’s shape the skies together.
           </p>
-          <a
-            href="#courses"
+          <button
+            onClick={handleViewCourses}
             className="inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold rounded-full transition duration-300"
           >
             View Our Courses
-          </a>
+          </button>
         </div>
       </div>
     </section>
