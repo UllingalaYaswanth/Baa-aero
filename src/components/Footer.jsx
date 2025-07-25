@@ -142,7 +142,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#4b5361] text-white py-12 px-8 relative">
+    <footer className="bg-[#adb5bd] text-white py-12 px-8 relative">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/5 left-1/10 w-24 h-24 rounded-full bg-yellow-400/10 animate-pulse"></div>
@@ -178,8 +178,11 @@ export default function Footer() {
                 Bhavyansh Aero Academy
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></span>
               </h3>
-              <p className="text-white/80">
-                Pioneering drone technology education and services to empower the next generation of aerial innovators.
+              <p className="text-white/90">
+                Shaping the Sky of Tomorrow, Today             
+              </p>
+              <p className="py-4 text-white/80">
+                Advanced drone tech transforming education, agriculture, and industry.             
               </p>
             </div>
 

@@ -30,7 +30,7 @@ export default function DroneSales() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Agricultural Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div className="h-48 bg-green-600 flex items-center justify-center">
+            <div className="h-48 flex items-center justify-center">
               <img 
                 src={agriculture} 
                 alt="Drone parts" 
@@ -52,15 +52,12 @@ export default function DroneSales() {
                   </li>
                 ))}
               </ul>
-              {/* <button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
-                Learn More
-              </button> */}
             </div>
           </div>
 
           {/* Surveillance Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div className="h-48 bg-blue-600 flex items-center justify-center">
+            <div className="h-48 flex items-center justify-center">
               <img 
                 src={survelliance} 
                 alt="Drone parts" 
@@ -80,15 +77,12 @@ export default function DroneSales() {
                   </li>
                 ))}
               </ul>
-              {/* <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
-                Learn More
-              </button> */}
             </div>
           </div>
 
           {/* Commercial Drones */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div className="h-48 bg-purple-600 flex items-center justify-center">
+            <div className="h-48 flex items-center justify-center">
               <img 
                 src={commercial} 
                 alt="Drone parts" 
