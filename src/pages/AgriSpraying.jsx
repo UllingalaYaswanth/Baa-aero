@@ -9,14 +9,16 @@ export default function AgriSprayingPage() {
   return (
     <>
       <Navbar />
-      <div className="py-20 px-8 bg-gray-100 min-h-screen animate__animated animate__fadeIn">
+      <div className="py-20 px-4 sm:px-6 md:px-8 bg-gray-100 min-h-screen animate__animated animate__fadeIn">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl mt-10 font-bold text-[#1a2a6c] mb-6 inline-block relative">
+          {/* Service Title */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mt-10 font-bold text-[#1a2a6c] mb-6 inline-block relative">
             {service.title}
             <span className="absolute bottom-[-5px] left-0 w-full h-[3px] rounded bg-gradient-to-r from-[#1a2a6c] to-[#b21f1f]"></span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Image + Description + Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
               <img
                 src={service.image}
@@ -25,24 +27,29 @@ export default function AgriSprayingPage() {
               />
             </div>
             <div>
-              <p className="mb-6 text-gray-700">
+              <p className="mb-6 text-sm sm:text-base text-gray-700">
                 Our agricultural drone spraying services revolutionize traditional farming methods by providing precise,
                 efficient, and cost-effective crop treatment solutions. With our advanced drone technology, we can cover
                 large areas quickly while using up to 90% less chemicals than traditional methods.
               </p>
+
               {service.features.map((feature, index) => (
-                <div className="feature-card mb-4 p-4 rounded-lg border-l-4 border-yellow-400 bg-gray-100 shadow hover:shadow-md transition-all" key={index}>
-                  <h3 className="text-xl font-semibold text-[#b21f1f] mb-2">
+                <div
+                  key={index}
+                  className="feature-card mb-4 p-4 rounded-lg border-l-4 border-yellow-400 bg-gray-100 shadow hover:shadow-md transition-all"
+                >
+                  <h3 className="text-base sm:text-lg font-semibold text-[#b21f1f] mb-2">
                     <i className={`${feature.icon} mr-2`}></i>
                     {feature.title}
                   </h3>
-                  <p className="text-gray-700">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-gray-700">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <h3 className="text-2xl font-bold text-[#1a2a6c] mb-6 inline-block relative">
+          {/* How It Works */}
+          <h3 className="text-xl sm:text-2xl font-bold text-[#1a2a6c] mb-6 inline-block relative">
             How It Works
             <span className="absolute bottom-[-3px] left-0 w-full h-[2px] bg-yellow-400"></span>
           </h3>
@@ -54,30 +61,30 @@ export default function AgriSprayingPage() {
             ))}
           </div>
 
-          <h3 className="text-2xl font-bold text-[#1a2a6c] mb-6 inline-block relative">
+          {/* Benefits */}
+          <h3 className="text-xl sm:text-2xl font-bold text-[#1a2a6c] mb-6 inline-block relative">
             Benefits of Drone Spraying
             <span className="absolute bottom-[-3px] left-0 w-full h-[2px] bg-yellow-400"></span>
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {service.benefits.map((benefit, index) => (
               <div
                 key={index}
                 className="bg-gray-100 p-6 rounded-lg text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <i className={`${benefit.icon} text-3xl text-[#b21f1f] mb-4`}></i>
-                <h4 className="text-lg font-semibold text-[#1a2a6c] mb-2">{benefit.title}</h4>
-                <p className="text-gray-700 text-sm">{benefit.description}</p>
+                <i className={`${benefit.icon} text-2xl sm:text-3xl text-[#b21f1f] mb-4`}></i>
+                <h4 className="text-base sm:text-lg font-semibold text-[#1a2a6c] mb-2">{benefit.title}</h4>
+                <p className="text-sm sm:text-base text-gray-700">{benefit.description}</p>
               </div>
             ))}
           </div>
 
-          <div className=" text-center py-12 px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#1a2a6c] text-white">
-            <h3 className="text-2xl font-bold mb-4">{service.cta.title}</h3>
-            <p className="mb-6">{service.cta.description}</p>
-            <button
-              className="px-6 py-3 bg-white text-[#1a2a6c] font-semibold rounded-full shadow-md hover:scale-105 transition-all"
-            >
+          {/* CTA Section */}
+          <div className="text-center py-12 px-4 sm:px-6 rounded-lg bg-gradient-to-r from-[#1a2a6c] to-[#1a2a6c] text-white">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">{service.cta.title}</h3>
+            <p className="text-sm sm:text-base mb-6">{service.cta.description}</p>
+            <button className="px-6 py-3 bg-white text-[#1a2a6c] font-semibold rounded-full shadow-md hover:scale-105 transition-all text-sm sm:text-base">
               {service.cta.buttonText}
             </button>
           </div>
